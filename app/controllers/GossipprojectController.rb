@@ -1,6 +1,6 @@
 class GossipprojectController < ApplicationController
   def home
-    @gossip = Gossip.all
+    @gossips = Gossip.all
   end
   def team
   end
@@ -9,5 +9,6 @@ class GossipprojectController < ApplicationController
   def welcome
   end
   def gossip
+    @gossip = Gossip.all.find_by(id:params[:id])
   end
 end

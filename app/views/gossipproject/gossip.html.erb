@@ -1,6 +1,6 @@
 <div>
   <p><b>Author:</b> <%= @gossip.user.first_name %></p>
+  <p><b>Title:</b> <%= @gossip.title %></p>
   <p><b>Content:</b> <%= @gossip.content %></p>
   <p><%= @gossip.created_at %></p>
-   <%= link_to "See the author profile:", user_path(@gossip.user_id), :class => "btn btn-outline-secondary m-4" %>
 </div>
