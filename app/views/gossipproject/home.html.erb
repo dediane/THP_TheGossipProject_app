@@ -1,1 +1,12 @@
+<div class="container text-center">
 <h1>Bienvenue sur The Gossip Project!</h1>
+<br>
+<div><h3>Juicy list of Gossips:</h3></div><br><br>
+<div>
+  <% @gossip.each_with_index do |gossip, i| %>
+    <h5><%=gossip.title%></h5>
+    <p><%=gossip.user.first_name%><br>
+    <%= link_to "See this gossip", gossip_path(gossip.id)%>
+  <%end%>
+ </div>
+ </div>
