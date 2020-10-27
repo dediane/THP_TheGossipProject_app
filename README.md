@@ -1,24 +1,34 @@
-# README
+# The Gossip Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+**Hey! This is a super cool app! It's called the Gossip Project!**
 
-* Ruby version
+to run the app: 
+```ruby
+bundle install
+```
 
-* System dependencies
+to seed the data base:
+```ruby
+rails db:seed
+```
 
-* Configuration
+to start the server:
+```ruby
+rails server
+```
 
-* Database creation
+then go to: 
+```hypertext
+http://localhost:3000
+```
 
-* Database initialization
+Here you go! Welcome to the app!
 
-* How to run the test suite
+if you want a special message for you in the landing page go to:
+```hypertext
+http://localhost:3000/welcome/yourname
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+**Hope you will enjoy!**
