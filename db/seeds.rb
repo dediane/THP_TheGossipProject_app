@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-City.destroy_all
-User.destroy_all
 Gossip.destroy_all
+User.destroy_all
+City.destroy_all
 
 #create 5 cities
 5.times do
