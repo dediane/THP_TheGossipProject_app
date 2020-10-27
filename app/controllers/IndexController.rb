@@ -1,4 +1,4 @@
-class GossipprojectController < ApplicationController
+class IndexController < ApplicationController
   def home
     @gossips = Gossip.all
   end

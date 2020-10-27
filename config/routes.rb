@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'gossipproject#home'
-  get '/team', to: 'gossipproject#team'
-  get '/contact', to: 'gossipproject#contact'
-  get '/welcome/:name', to: 'gossipproject#welcome' 
-  get '/gossip/:id', to: 'gossipproject#gossip', as: 'gossip'
-  get '/user/:id', to: 'gossipproject#user', as: 'user'
+  root 'index#home'
+  get '/team', to: 'index#team'
+  get '/contact', to: 'index#contact'
+  get '/welcome/:name', to: 'index#welcome' 
+  get '/gossip/:id', to: 'index#gossip', as: 'gossip'
+  get '/user/:id', to: 'index#user', as: 'user'
 end
