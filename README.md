@@ -5,6 +5,8 @@
 
 <p align="center"><img src="https://media0.giphy.com/media/hQdWtl18ibA58nil8t/200.gif"></p>
 
+## The app is usign Ruby 2.7.1 & Rails 6.0.3
+
 to run the app: 
 ```ruby
 bundle install
