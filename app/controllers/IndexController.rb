@@ -9,9 +9,7 @@ class IndexController < ApplicationController
   def welcome
     @gossips = Gossip.all
   end
-  def gossip
-    @gossip = Gossip.all.find_by(id:params[:id])
-  end
+  
   def user
     @user = User.all.find_by(id:params[:id])
   end
