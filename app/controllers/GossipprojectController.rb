@@ -7,6 +7,7 @@ class GossipprojectController < ApplicationController
   def contact
   end
   def welcome
+    @gossips = Gossip.all
   end
   def gossip
     @gossip = Gossip.all.find_by(id:params[:id])

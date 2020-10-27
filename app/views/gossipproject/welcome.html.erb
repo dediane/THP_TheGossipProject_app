@@ -1,2 +1,17 @@
+<div class="container text-center">
 <h1>Hello <%= params[:name].capitalize %></h1>
-<h1>Bienvenue sur The Gossip Project!</h1>
+<h2><em>Welcome to The Gossip Project!</em></h2>
+<div><h3><u>Juicy list of Gossips:</u></h3></div><br><br>
+
+
+<div>
+  <% @gossips.each_with_index do |gossip, i| %>
+  <div class="card" style="width:18rem;">
+    <h5><%=gossip.title%></h5>
+    <p><%=gossip.user.first_name%><br>
+    <em><%= link_to "See this gossip", gossip_path(gossip.id)%></em>
+    </div><br>
+  <%end%>
+  </div>
+</div>
+ 

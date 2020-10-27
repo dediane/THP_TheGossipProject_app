@@ -1,4 +1,5 @@
-<div style="margin-left: 150px; margin-right: 150px; margin-top: 80px">
+
+<div class="page">
   <p style="font-size: 22px"><u><b>Gossip n° <%=@gossip.id%></b></u></p>
   <p><b>Author:</b> <%= @gossip.user.first_name %></p>
   <p><b>Title:</b> <%= @gossip.title %></p>
@@ -6,3 +7,4 @@
   <p><em><%= @gossip.created_at %><em></p>
   <%= link_to "More about the author...", user_path(@gossip.user.id)%>
 </div>
+
