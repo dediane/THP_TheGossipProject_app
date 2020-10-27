@@ -1,4 +1,4 @@
-class GossipController < ApplicationController
+class GossipsController < ApplicationController
   def new
     
   end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :gossip
+  resources :gossips
 
   root 'index#home'
   get '/team', to: 'index#team'
