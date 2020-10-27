@@ -1,7 +1,7 @@
 # The Gossip Project
 
 
-## Hey! This is a super cool app! It's called the Gossip Project!**
+## Hey! This is a super cool app! It's called the Gossip Project!
 
 <p align="center"><img src="https://media0.giphy.com/media/hQdWtl18ibA58nil8t/200.gif"></p>
 
