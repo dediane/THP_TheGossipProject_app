@@ -1,7 +1,8 @@
 
 <div class="page">
   <p style="font-size: 22px"><u><b>Gossip n° <%=@gossip.id%></b></u></p>
-  <p><b>Author:</b> <%= @gossip.user.first_name %> from the city of <%= link_to @gossip.user.city.name, city_path(@gossip.user.city.id)%></p>
+  <p><b>Author:</b> <%= @gossip.user.first_name %> from the city of 
+  <%= link_to @gossip.user.city.name, city_path(@gossip.user.city.id)%></p>
   <p><b>Title:</b> <%= @gossip.title %></p>
   <p><b>Content:</b> <%= @gossip.content %></p>
   <p><em><%= @gossip.created_at %><em></p>

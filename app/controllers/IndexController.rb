@@ -16,5 +16,6 @@ class IndexController < ApplicationController
 
   def city
     @city = City.all.find_by(id:params[:id])
+    @gossips = Gossip.all
   end
 end
