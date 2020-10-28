@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/contact', to: 'index#contact'
   get '/welcome/:name', to: 'index#welcome' 
   get '/user/:id', to: 'index#user', as: 'user'
+  get '/city/:id', to: 'index#city', as: 'city'
 end

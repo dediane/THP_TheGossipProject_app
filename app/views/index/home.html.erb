@@ -1,15 +1,31 @@
-<div class="container text-center">
-<h1>Welcome on The Gossip Project!</h1>
-<br>
-<div><h3><u>Juicy list of Gossips:</u></h3></div><br><br>
+<div class="wrapping">
+
+<% if notice %>
+<div class="alert alert-success" role="alert">
+  <%= notice %>
+</div>
+<% end %>
+
+  <div class="container text-center">
+  <h1>Welcome on The Gossip Project!</h1>
+  <div class="bouton page">
+    <button type="button" class="btn btn-primary btn-lg">
+      <em><b><%= link_to "Create a new Gossip!", new_gossip_path%></b></em>
+    </button>
+    <br><br><h4>
+      <u>Juicy list of Gossips:</u>
+    </h4>
+  </div>
+  <br>
 
 
-<div class="row col">
-  <% @gossips.each_with_index do |gossip, i| %>
-    <div class="card" style="width:18rem;">
-      <h5><%=gossip.title%></h5>
-      <p><%=gossip.user.first_name%><br><br>
+  <div class="row col">
+    <% @gossips.each_with_index do |gossip, i| %>
+      <div class="card" style="width:18rem;">
+        <h5><%=gossip.title%></h5>
+        <%=gossip.user.first_name%><br><br>
         <em><%= link_to "See this gossip", gossip_path(gossip.id)%></em>
-    </div>
-  <%end%>
+      </div>
+    <%end%>
+  </div>
 </div>

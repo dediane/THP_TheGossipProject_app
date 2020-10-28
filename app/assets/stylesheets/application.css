@@ -13,7 +13,13 @@
  *= require_tree .
  *= require_self
  */
+.wrapping {
+  background-color: #ffffff !important;
+}
+
 .card {
+  border-width: 2px !important;
+  border-color:  !important;
   margin: 0 auto;
   padding: 10px;
   /* Added */
@@ -26,7 +32,7 @@
 .card h5 {}
 
 .card a {
-  color: rgb(242, 133, 169);
+  color: #F285A9;
 }
 
 .card a:hover {
@@ -40,9 +46,35 @@
 }
 
 .page a {
-  color: rgb(242, 133, 169);
+  color: #F285A9;
 }
 
 .page a:hover {
   color: #b54264;
+}
+
+
+.btn-primary {
+  border: #F285A9 !important;
+  background-color: #F285A9 !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  color: #ffffff !important;
+}
+
+.btn-primary a {
+  color: #ffffff !important;
+
+}
+
+.btn-primary:hover {
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: #F285A9 !important;
+  color: #F285A9 !important;
+  background-color: #ffffff !important;
+}
+
+.btn-primary a:hover {
+  color: #F285A9 !important;
 }

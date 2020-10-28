@@ -13,4 +13,8 @@ class IndexController < ApplicationController
   def user
     @user = User.all.find_by(id:params[:id])
   end
+
+  def city
+    @city = City.all.find_by(id:params[:id])
+  end
 end
