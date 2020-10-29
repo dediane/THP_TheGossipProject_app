@@ -1,10 +1,11 @@
 class GossipsController < ApplicationController
-  
+  before_action :authenticate_user, only: [:new, :show, :edit, :delete]
+
   def new
   end
 
   def create
-    @gossip = Gossip.new(title:params[:title], content:params[:content], user:User.find_by(id: 7))
+    @gossip = Gossip.new(title:params[:title], content:params[:content], user:current_user)
     if @gossip.save
       flash[:notice] = "New gossip created! Congrats!!!"
       redirect_to root_path
@@ -41,6 +42,15 @@ class GossipsController < ApplicationController
     
   def post_params
     params.require(:gossip).permit(:title, :content)
+  end
+
+  private
+
+  def authenticate_user
+    unless current_user
+      flash.now[:alert] = "Please log in."
+      redirect_to new_session_path
+    end
   end
 
 end
