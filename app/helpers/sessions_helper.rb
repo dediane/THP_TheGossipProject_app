@@ -11,4 +11,8 @@ module SessionsHelper
     session[:user_id] != nil
   end
 
+  def author?(user)
+    current_user == user
+  end
+
 end

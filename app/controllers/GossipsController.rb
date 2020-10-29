@@ -27,17 +27,27 @@ class GossipsController < ApplicationController
 
   def update
     @gossip = Gossip.all.find_by(id:params[:id])
-    if @gossip.update(post_params)
-      flash[:notice] = "Gossip has been updated :)"
+    if author?(@gossip.user)
+      if @gossip.update(post_params)
+        flash[:notice] = "Gossip has been updated :)"
+        redirect_to @gossip
+      end
+    else
+      flash[:alert] = "You can't update someone else gossip!"
       redirect_to @gossip
     end
   end
 
   def destroy
     @gossip = Gossip.all.find_by(id:params[:id])
-    @gossip.destroy
-    flash[:notice] = "Gossip has been deleted :)"
-    redirect_to root_path
+    if author?(@gossip.user)
+      @gossip.destroy
+      flash[:notice] = "Gossip has been deleted :)"
+      redirect_to root_path
+    else
+      flash[:alert] = "You can't delete someone else gossip!"
+      redirect_to root_path
+    end
   end
     
   def post_params
