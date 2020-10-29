@@ -1,11 +1,33 @@
-
 <div class="page">
+
   <p style="font-size: 22px"><u><b>Gossip n° <%=@gossip.id%></b></u></p>
-  <p><b>Author:</b> <%= @gossip.user.first_name %> from the city of 
-  <%= link_to @gossip.user.city.name, city_path(@gossip.user.city.id)%></p>
-  <p><b>Title:</b> <%= @gossip.title %></p>
-  <p><b>Content:</b> <%= @gossip.content %></p>
-  <p><em><%= @gossip.created_at %><em></p>
-  <%= link_to "More about the author...", user_path(@gossip.user.id)%>
+
+
+  <p>
+  <%= link_to "Edit", edit_gossip_path, :class => "btn btn-outline-success btn-sm"%>
+  <%= link_to "Delete" , gossip_path(@gossip.id), :method => "delete", :class => "btn btn-outline-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
+  </p>
+
+  <div class="content">
+    <div class="section">
+      <p>
+        <b>Author:</b> <%= @gossip.user.first_name %> from the city of 
+        <%= link_to @gossip.user.city.name, city_path(@gossip.user.city.id)%>
+      </p>
+      <p><b>Title:</b> <%= @gossip.title %></p>
+      <p><b>Content:</b> <%= @gossip.content %></p>
+      <p class="datetime"><em><%= @gossip.created_at %></em></p>
+      <%= link_to "More about the author...", user_path(@gossip.user.id)%>
+    </div><br><hr>
+  </div>
+
+  <div class="section">
+    <h5>Comments</h5>
+    <%= render partial: 'gossips/comment', collection: @gossip.comments.reverse %>
+  </div><hr>
+  <div class="section">
+    <h5>Post a comment</h5>
+    <%= render partial: 'comments/form' %>
+  </div>
 </div>
 

@@ -1,0 +1,15 @@
+<div class="page content text-center">
+<h2>Edit the comment:</h2><br>
+  <%= form_for [@gossip, @comment] do |form|%>
+  
+    <label> Author </label>
+    <%= form.text_field :author %>
+    <br><br>
+
+    <label> Content </label>
+    <%= form.text_field :content %>
+    <br><br>
+
+    <%= submit_tag "Update comment", class: 'btn btn-outline-primary btn-sm' %>
+  <% end %>
+</div>

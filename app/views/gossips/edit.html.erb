@@ -1,0 +1,16 @@
+    
+<div class="page content text-center">
+<h2>Edit the gossip:</h2><br>
+  <%= form_for @gossip do |form|%>
+  
+    <label> Title </label>
+    <%= form.text_field :title %>
+    <br><br>
+
+    <label> Content </label>
+    <%= form.text_field :content %>
+    <br><br>
+
+    <%= submit_tag "Update gossip", class: 'btn btn-outline-primary btn-sm' %>
+  <% end %>
+</div>

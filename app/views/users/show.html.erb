@@ -1,5 +1,5 @@
 
-<div class="page">
+<div class="page content">
   <p style="font-size: 22px"><u><b>Profile of <%= @user.first_name%></b></u></p><br>
   <p><b> First Name: </b><%= @user.first_name%></p>
   <p><b> Last Name: </b><%= @user.last_name%></p>
@@ -8,5 +8,5 @@
   <p><b> City: </b>
   <%= link_to  @user.city.name, city_path(@user.city.id)%><br></p>
   <p><b> Description: </b><%= @user.description%></p>
-  <p><em><%= @user.updated_at %><em></p>
+  <p class="datetime"><em><%= @user.updated_at %><em></p>
 </div>

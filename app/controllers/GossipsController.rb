@@ -1,6 +1,6 @@
 class GossipsController < ApplicationController
+  
   def new
-
   end
 
   def create
@@ -16,11 +16,31 @@ class GossipsController < ApplicationController
   
   def show
     @gossip = Gossip.all.find_by(id:params[:id])
+    @comment = Comment.new
+    @comment.gossip_id = @gossip.id
+  end
+
+  def edit
+    @gossip = Gossip.all.find_by(id:params[:id])
   end
 
   def update
+    @gossip = Gossip.all.find_by(id:params[:id])
+    if @gossip.update(post_params)
+      flash[:notice] = "Gossip has been updated :)"
+      redirect_to @gossip
+    end
   end
 
   def destroy
+    @gossip = Gossip.all.find_by(id:params[:id])
+    @gossip.destroy
+    flash[:notice] = "Gossip has been deleted :)"
+    redirect_to root_path
   end
+    
+  def post_params
+    params.require(:gossip).permit(:title, :content)
+  end
+
 end

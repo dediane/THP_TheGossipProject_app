@@ -1,13 +1,8 @@
 
 <html>
   <body>
-   <% if alert %>
-      <div class="alert alert-danger" role="alert">
-    <%= alert %>
-      </div>
-    <% end %>
 
-    <div class="page text-center">
+    <div class="page content text-center">
       <%= form_tag url_for(action: 'create'), method: "post" do %>
       
         <%= label_tag 'Title', name = 'Title' %>

@@ -9,13 +9,5 @@ class IndexController < ApplicationController
   def welcome
     @gossips = Gossip.all
   end
-  
-  def user
-    @user = User.all.find_by(id:params[:id])
-  end
 
-  def city
-    @city = City.all.find_by(id:params[:id])
-    @gossips = Gossip.all
-  end
 end
