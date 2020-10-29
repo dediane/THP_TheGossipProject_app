@@ -2,7 +2,7 @@
   <p><u>Commented by</u> <b><%= comment.author %></b></p>
   <p class="comment"><%= comment.content %></p>
   <p class="datetime"><em>posted on the: <%= comment.created_at %></em></p>
-  <p><%= link_to "Edit this comment", edit_gossip_comment_path(@gossip.id, comment.id), :class => "btn btn-outline-dark btn-sm"%><br></p>
-    <%= link_to "Delete", gossip_comment_path(comment.gossip_id, comment.id), :method => "delete", :class => "btn btn-outline-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
+  <p><%= link_to "Edit this comment", edit_gossip_comment_path(@gossip.id, comment.id), :class => "btn btn-outline-dark btn-sm"%>
+    <%= link_to "Delete", gossip_comment_path(comment.gossip_id, comment.id), :method => "delete", :class => "btn btn-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %></p>
 
 </div>

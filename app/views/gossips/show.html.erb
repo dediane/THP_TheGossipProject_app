@@ -2,12 +2,6 @@
 
   <p style="font-size: 22px"><u><b>Gossip n° <%=@gossip.id%></b></u></p>
 
-
-  <p>
-  <%= link_to "Edit", edit_gossip_path, :class => "btn btn-outline-success btn-sm"%>
-  <%= link_to "Delete", gossip_path(@gossip.id), :method => "delete", :class => "btn btn-outline-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
-  </p>
-
   <div class="content">
     <div class="section">
       <p>
@@ -16,6 +10,10 @@
       </p>
       <p><b>Title:</b> <%= @gossip.title %></p>
       <p><b>Content:</b> <%= @gossip.content %></p>
+      <p>
+  <%= link_to "Edit", edit_gossip_path, :class => "btn btn-outline-success btn-sm"%>
+  <%= link_to "Delete", gossip_path(@gossip.id), :method => "delete", :class => "btn btn-outline-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
+  </p>
       <p class="datetime"><em><%= @gossip.created_at %></em></p>
       <%= link_to "More about the author...", user_path(@gossip.user.id)%>
     </div><br><hr>

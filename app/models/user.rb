@@ -18,7 +18,12 @@ class User < ApplicationRecord
      presence: true,
      numericality: { only_integer: true, greater_than: 0, lower_than: 100}
 
+  validates :password, 
+    presence: true, 
+    length: { minimum: 6 }
+
   
   belongs_to :city
   has_many :gossips
+  has_secure_password
 end
