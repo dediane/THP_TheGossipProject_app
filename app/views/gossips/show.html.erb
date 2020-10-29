@@ -5,7 +5,7 @@
 
   <p>
   <%= link_to "Edit", edit_gossip_path, :class => "btn btn-outline-success btn-sm"%>
-  <%= link_to "Delete" , gossip_path(@gossip.id), :method => "delete", :class => "btn btn-outline-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
+  <%= link_to "Delete", gossip_path(@gossip.id), :method => "delete", :class => "btn btn-outline-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
   </p>
 
   <div class="content">

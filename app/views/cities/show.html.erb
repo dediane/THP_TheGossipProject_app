@@ -2,15 +2,16 @@
   <p style="font-size: 22px"><u><b>This is the city of <%= @city.name%></b></u></p><br>
   <p><b>See</b> all gossips from <u><%=@city.name%></u>:<p><br><br>
 
-  <div class="row col text-center">
+
+  <div class="list-group d-flex">
     <% @gossips.each do |gossip|%>
       <%if gossip.user.city.name == @city.name%>
-          <div class="card" style="width:18rem;">
+          <div class="list-group-item list-group-item-action mx-auto text-center" style="width:40rem;">
         <h5>
-          <%=gossip.title%>
+          Title: <%=gossip.title%>
         </h5>
         <p>
-          <%=gossip.user.first_name%><br>
+          Author: <%=gossip.user.first_name%><br>
         </p>
   
         <p>
@@ -24,5 +25,4 @@
       <% end %>
     <% end %>
   </div>
-
 </div>

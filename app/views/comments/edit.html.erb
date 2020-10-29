@@ -12,4 +12,5 @@
 
     <%= submit_tag "Update comment", class: 'btn btn-outline-primary btn-sm' %>
   <% end %>
+  <%= link_to "Delete", gossip_comment_path(@comment.gossip_id, @comment.id), :method => "delete", :class => "btn btn-outline-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
 </div>

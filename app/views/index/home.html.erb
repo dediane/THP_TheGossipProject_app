@@ -16,10 +16,10 @@
     <% @gossips.each_with_index do |gossip, i| %>
       <div class="card" style="width:18rem;">
         <h5>
-          <%=gossip.title%>
+          Title: <%=gossip.title%>
         </h5>
         <p>
-          <%=gossip.user.first_name%><br>
+          Author: <%=gossip.user.first_name%><br>
         </p>
          <p>
           <%= link_to "Edit", edit_gossip_path(gossip.id), :class => "btn btn-outline-success btn-sm"%>

@@ -21,6 +21,12 @@ class CommentsController < ApplicationController
     redirect_to gossip_path(@comment.gossip)
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to gossip_path(@comment.gossip, @comment)
+  end
+
   def comment_params
     params.require(:comment).permit(:author, :content)
   end
