@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_secure_password
   validates :first_name,
     presence: true
 
@@ -15,8 +16,7 @@ class User < ApplicationRecord
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "email adress please" }
     
   validates :age,
-     presence: true,
-     numericality: { only_integer: true, greater_than: 0, lower_than: 100}
+     presence: true
 
   validates :password, 
     presence: true, 
@@ -25,5 +25,4 @@ class User < ApplicationRecord
   
   belongs_to :city
   has_many :gossips
-  has_secure_password
 end

@@ -18,7 +18,7 @@ end
 
 #create 6 users
 6.times do
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.sentence(word_count: 50 + rand(10)), email: Faker::Internet.email, age: Faker::Number.between(from: 15, to: 99), city: City.all.sample)
+  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.sentence(word_count: 50 + rand(10)), email: Faker::Internet.email, age: Faker::Number.between(from: 15, to: 99), city: City.all.sample, password: Faker::Internet.password(min_length: 8))
 end
 
 #create 10 gossips

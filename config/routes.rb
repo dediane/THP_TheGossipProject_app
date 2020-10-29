@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   end
   resources :cities
   resources :users
+  resources :sessions
 
   root 'index#home'
   get '/team', to: 'index#team'
