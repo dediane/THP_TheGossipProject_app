@@ -22,7 +22,7 @@
   </div>
 
   <div class="section">
-    <h5>Comments</h5>
+    <h5>Comments (<%= @gossip.comments.size %>)</h5>
     <%= render partial: 'gossips/comment', collection: @gossip.comments.reverse %>
   </div><hr>
   <div class="section">
