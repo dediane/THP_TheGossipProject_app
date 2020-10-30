@@ -13,13 +13,30 @@
  *= require_tree .
  *= require_self
  */
+.box {
+  max-width: 650px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.box p {
+  color: #eeb4ba;
+}
+
+.title {
+  font-size: 60px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  color: #e7957f;
+}
+
 .wrapping {
   background-color: #ffffff !important;
 }
 
 .card {
   border-width: 2px !important;
-  border-color:  !important;
+  border-color: pink !important;
   margin: 0 auto;
   padding: 10px;
   /* Added */
@@ -36,54 +53,55 @@
 }
 
 .content a {
-  color: #F285A9;
+  color: #eeb4ba;
 }
 
 .content a:hover {
-  color: #b54264;
+  color: #d78b93;
 }
 
 
 .btn-lg {
-  border: #F285A9 !important;
-  background-color: #F285A9 !important;
+  border: #eeb4ba !important;
+  background-color: #eeb4ba !important;
   border-width: 2px !important;
   border-style: solid !important;
   color: #ffffff !important;
+
 }
 
 .btn-lg a {
   color: #ffffff !important;
-
 }
 
 .btn-lg:hover {
   border-width: 2px !important;
   border-style: solid !important;
-  border-color: #F285A9 !important;
-  color: #F285A9 !important;
+  border-color: #eeb4ba !important;
+  color: #eeb4ba !important;
   background-color: #ffffff !important;
 }
 
 .btn-lg a:hover {
-  color: #F285A9 !important;
+  color: #eeb4ba !important;
 }
 
 .btn-primary {
-  background-color: #F285A9 !important;
-  border-color: #F285A9 !important;
+  background-color: #eeb4ba !important;
+  border-color: #eeb4ba !important;
   color: #ffffff !important;
+  outline: #d78b93 !important;
 }
 
 .btn-primary:hover {
   background-color: #ffffff !important;
-  border-color: #F285A9 !important;
-  color: #F285A9 !important;
+  border-color: #eeb4ba !important;
+  color: #eeb4ba !important;
 }
 
 
 .btn-outline-primary a {
-  color: #F285A9 !important;
+  color: #eeb4ba !important;
 }
 
 .btn-outline-primary a:hover {
@@ -94,15 +112,15 @@
   background-color: #ffffff !important;
   border-width: 1px !important;
   border-style: solid !important;
-  border-color: #F285A9 !important;
-  color: #F285A9 !important;
+  border-color: #eeb4ba !important;
+  color: #eeb4ba !important;
 }
 
 .btn-outline-primary:hover {
-  background-color: #F285A9 !important;
+  background-color: #eeb4ba !important;
   border-width: 1px !important;
   border-style: solid !important;
-  border-color: #F285A9 !important;
+  border-color: #eeb4ba !important;
   color: #ffffff !important;
 }
 
@@ -120,13 +138,13 @@
   border-color: #97d155 !important;
 }
 
-.btn-success:hover {
+.badge-success:hover {
   border-color: #97d155 !important;
   background-color: #ffffff !important;
   color: #97d155 !important;
 }
 
-.btn-success {
+.badge-success {
   background-color: #97d155 !important;
   color: #ffffff !important;
   border-width: 1px !important;
@@ -135,31 +153,55 @@
 }
 
 .btn-outline-danger {
-  border-color: #d22c1f !important;
+  border-color: #e41e33 !important;
   background-color: #ffffff !important;
-  color: #d22c1f !important;
+  color: #e41e33 !important;
 }
 
 .btn-outline-danger:hover {
-  background-color: #d22c1f !important;
+  background-color: #e41e33 !important;
   color: #ffffff !important;
   border-width: 1px !important;
   border-style: solid !important;
-  border-color: #d22c1f !important;
+  border-color: #e41e33 !important;
 }
 
-.btn-danger:hover {
-  border-color: #d22c1f !important;
+.badge-danger:hover {
+  border-color: #e41e33 !important;
   background-color: #ffffff !important;
-  color: #d22c1f !important;
+  color: #e41e33 !important;
+}
+
+.badge-danger {
+  background-color: #e41e33 !important;
+  color: #ffffff !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #e41e33 !important;
 }
 
 .btn-danger {
-  background-color: #d22c1f !important;
+  background-color: #d44756 !important;
   color: #ffffff !important;
   border-width: 1px !important;
   border-style: solid !important;
-  border-color: #d22c1f !important;
+  border-color: #d44756 !important;
+}
+
+.btn-danger:hover {
+  border-color: #d44756 !important;
+  background-color: #ffffff !important;
+  color: #d44756 !important;
+}
+
+.btn-secondary {
+  background-color: #9bbfc2 !important;
+  border-color: #9bbfc2 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #73999c !important;
+  border-color: #73999C !important;
 }
 
 .datetime {

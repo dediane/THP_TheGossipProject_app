@@ -1,32 +1,33 @@
 <div class="wrapping">
 
-  <div class="container text-center">
-  <h1>Welcome on The Gossip Project!</h1>
-  <div class="page">
-      <em><b><%= link_to "Create a new Gossip!", new_gossip_path, :class => "btn btn-lg"%></b></em>
-    </button>
-    <br><br><h4>
-      <u>Juicy list of Gossips:</u>
-    </h4>
+<div class="jumbotron jumbotron-fluid text-center" style="background-image: url(https://i.pinimg.com/564x/7e/12/94/7e1294d5fdbd33d10726312ba874dd43.jpg)">
+  <div class="box mx-auto">
+    <h1 class="title"><b>THE GOSSIP PROJECT<b></h1>
+    <p class="lead"><b>This Gossip Project allows users to post, comment and like gossips...</b></p>
+     <em><b><%= link_to "Create a new gossip now!", new_gossip_path, :class => "btn btn-lg"%></b></em><br><br>
   </div>
-  <br>
-
+</div>
+<div class="container text-center">
+  <div class="page">
+    <h4><u>Juicy list of Gossips:</u></h4>
+  </div>
+  <br>  
 
   <div class="row col">
     <% @gossips.each_with_index do |gossip, i| %>
       <div class="card" style="width:18rem;">
         <h5>
-          Title: <%=gossip.title%>
+          <b>Title:</b> <%=gossip.title%>
         </h5>
         <p>
-          Author: <%=gossip.user.first_name%><br>
+          Author:<%=gossip.user.first_name%><br>
         </p>
-         <p>
-          <%= link_to "Edit", edit_gossip_path(gossip.id), :class => "btn btn-outline-success btn-sm"%>
-          <%= link_to "Delete" , gossip_path(gossip.id), :method => "delete", :class => "btn btn-outline-danger btn-sm", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
+          <p>
+          <%= link_to "Edit", edit_gossip_path(gossip.id), :class => "badge badge-success"%>
+          <%= link_to "Delete" , gossip_path(gossip.id), :method => "delete", :class => "badge badge-danger", :data => {:confirm => "Do you really want to Delete this gossip?"} %>
         </p>
         <p>
-          <em><%= link_to "See this gossip", gossip_path(gossip.id), :class => "btn btn-primary btn-block"%></em>
+          <em><%= link_to "See this gossip", gossip_path(gossip.id), :class => "btn btn-primary btn-block"%></em></button>
         </p>
       </div>
     <%end%>
