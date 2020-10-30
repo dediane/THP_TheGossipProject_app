@@ -25,3 +25,8 @@ end
 10.times do
   Gossip.create(title: Faker::Artist.name, content: Faker::Lorem.sentence(word_count: 30 + rand(10)), user: User.all.sample)
 end
+
+#create 10 comments
+15.times do 
+  Comment.create(content: Faker::Lorem.sentence(word_count: 10 + rand(10)), user: User.all.sample, gossip: Gossip.all.sample)
+end
