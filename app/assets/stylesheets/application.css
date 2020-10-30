@@ -13,6 +13,28 @@
  *= require_tree .
  *= require_self
  */
+.badge-primary:hover {
+  background-color: #d44756 !important;
+  color: #ffffff !important;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.badge-primary {
+  background-color: #ffffff !important;
+  color: #d44756 !important;
+  border-color: #d44756 !important;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.clicked {
+  background-color: #d44756 !important;
+  color: #ffffff !important;
+  border-color: #d44756 !important;
+  border-width: 1px;
+  border-style: solid;
+}
 
 .box {
   max-width: 650px;
